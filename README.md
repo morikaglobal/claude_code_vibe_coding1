@@ -1,20 +1,21 @@
-# Claude Code Vibe Coding app development demo 🍳 レシピカードメーカー (Recipe Card Maker)
+# 🍳 レシピカードメーカー (Recipe Card Maker) <br>
+Claude Code Vibe Coding/app development demo 
 
-このデモ用プロジェクトはClaude Codeを使ったVibe CodingでYouTubeの料理動画（またはショート動画）からレシピを自動抽出し、1ページのきれいなレシピカード（PDF）を自動生成するWebアプリケーションです。
+このデモ用プロジェクトはClaude Codeを使ったVibe CodingでYouTubeの料理動画（またはショート動画）からレシピを自動抽出し、1ページのきれいなレシピカード（PDF）を自動生成するWebアプリケーションです
 
 This project is Demo for using Claude Code to vibe code to develop a simple web application to enter a YouTube cooking video/short link to generate one-page PDF of the recipe from the video
 
-![Image1](images/screenshots/claude_code_recipe_maker_ui_plan.jpg)
+![How the app looks](images/claude_code_recipe_maker_ui_plan.jpg)
 
 YouTubeの料理動画（またはショート動画）のリンクを入力すると動画から自動生成されたレシピカード（PDF）のプレビューが表示されてPDFをダウンロード、のボタンをクリックすると生成された1ページPDFのレシピカードをダウンロードすることができます。
 
-![Image1](images/screenshots/claude_code_recipe_maker_ui_plan_2.jpg)
+![PDF preview on the app](images/claude_code_recipe_maker_ui_plan_2.jpg)
 
-実際に完成したこのアプリを使って作成したレシピカードの例：
+実際に完成したこのアプリを使って作成したレシピカード(PDF)の例：
 
-レシピカード例その1_おさつポテト
+<a href="https://github.com/morikaglobal/claude_code_vibe_coding1/blob/main/images/%E3%83%AC%E3%82%B7%E3%83%94%E3%82%AB%E3%83%BC%E3%83%89%E4%BE%8B%E3%81%9D%E3%81%AE1_%E3%81%8A%E3%81%95%E3%81%A4%E3%83%9D%E3%83%86%E3%83%88.pdf" target="_blank">レシピカード例その1_おさつポテト</a>
 
-レシピカード例その2_にんじんのポタージュ
+<a href="https://github.com/morikaglobal/claude_code_vibe_coding1/blob/main/images/%E3%83%AC%E3%82%B7%E3%83%94%E3%82%AB%E3%83%BC%E3%83%89%E4%BE%8B%E3%81%9D%E3%81%AE2_%E3%81%AB%E3%82%93%E3%81%98%E3%82%93%E3%81%AE%E3%83%9D%E3%82%BF%E3%83%BC%E3%82%B8%E3%83%A5.pdf" target="_blank">レシピカード例その2_にんじんのポタージュ</a>
 
 ## 機能
 
@@ -22,10 +23,12 @@ YouTubeの料理動画（またはショート動画）のリンクを入力す�
 - **自動抽出**: 動画の説明文・字幕からレシピを抽出
 - **AI分析**: Claude APIでレシピを自動分析・整形
 - **PDF生成**: 1ページに収まるきれいなPDFを自動生成
-  - 動画のサムネイル画像を掲載
+  - 動画のサムネイル画像を掲載(注*1)
   - 材料リスト
   - 調理手順
 - **シンプルUI**: 使いやすいWebインターフェース
+
+注*1 動画がフル動画ではなくショート動画だった場合、そもそも設定されているサムネイル画像が無いのでサムネイル画像が無い、または表示されない、などの場合はサムネイルの表示範囲にはショート動画なのでサムネイルが無い、と記載する仕様に変更した
 
 ## セットアップ
 
