@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レシピカードメーカー - Recipe Card Maker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍳 レシピカードメーカー</h1>
+            <p class="subtitle">Recipe Card Maker</p>
+            <p>YouTubeの料理動画リンクからレシピカードをすぐに作成</p>
+        </header>
+
+        <main>
+            <form id="recipeForm" class="form-container">
+                <div class="form-group">
+                    <label for="videoUrl">YouTubeビデオURL</label>
+                    <input
+                        type="text"
+                        id="videoUrl"
+                        name="url"
+                        placeholder="https://www.youtube.com/watch?v=..."
+                        required
+                        autocomplete="off"
+                    >
+                    <small>YouTubeの料理動画のリンクを入力してください</small>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    <span class="btn-text">PDFを生成</span>
+                    <span class="spinner" style="display: none;"></span>
+                </button>
+            </form>
+
+            <div id="resultContainer" class="result-container" style="display: none;">
+                <div class="success-message">
+                    <p>✅ レシピカードができました、どうですか？</p>
+                </div>
+
+                <div class="preview-section">
+                    <h3>PDFプレビュー</h3>
+                    <div id="pdfPreview" class="pdf-preview">
+                        <canvas id="pdfCanvas"></canvas>
+                    </div>
+                    <div class="preview-controls">
+                        <button id="prevPageBtn" class="btn-control" title="前のページ">← 前</button>
+                        <span id="pageInfo" class="page-info">ページ 1</span>
+                        <button id="nextPageBtn" class="btn-control" title="次のページ">次 →</button>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <button id="downloadBtn" class="btn-download">
+                        📥 PDFをダウンロード
+                    </button>
+                </div>
+            </div>
+
+            <div id="errorContainer" class="error-container" style="display: none;">
+                <div class="error-message">
+                    <p id="errorText"></p>
+                </div>
+            </div>
+
+            <div id="infoMessage" class="info-message">
+                <p>⏳ カード作成には1～2分ほどかかります</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>YouTubeの料理動画から、シンプルで読みやすいレシピカードを自動作成</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
