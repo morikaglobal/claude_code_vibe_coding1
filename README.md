@@ -1,5 +1,6 @@
-# 🍳 レシピカードメーカー (Recipe Card Maker) <br>
-Claude Code Vibe Coding/app development demo 
+# 🍳 レシピカードメーカー (Recipe Card Maker)
+
+## Claude Code Vibe Coding/app development demo 
 
 このデモ用プロジェクトはClaude Codeを使ったVibe CodingでYouTubeの料理動画（またはショート動画）からレシピを自動抽出し、1ページのきれいなレシピカード（PDF）を自動生成するWebアプリケーションです
 
