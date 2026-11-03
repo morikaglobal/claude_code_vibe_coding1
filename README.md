@@ -46,6 +46,42 @@ YouTubeの料理動画（またはショート動画）のリンクを入力す�
 
 ### インストール
 
+#### オプション 1: uv を使う場合（推奨）
+
+1. **仮想環境を作成:**
+```bash
+uv venv .venv
+```
+
+2. **仮想環境を有効化:**
+
+**Windows - コマンドプロンプト（CMD）:**
+```bash
+.venv\Scripts\activate.bat
+```
+
+**Windows - PowerShell:**
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+3. **依存パッケージをインストール:**
+```bash
+uv pip install -r requirements.txt
+```
+
+4. **`.env` ファイルを作成:**
+```bash
+copy .env.example .env
+```
+
+5. **`.env` ファイルに Anthropic API キーを設定:**
+```
+ANTHROPIC_API_KEY=sk-...
+```
+
+#### オプション 2: python -m venv を使う場合
+
 1. **仮想環境を作成:**
 ```bash
 python -m venv .venv
@@ -79,6 +115,29 @@ ANTHROPIC_API_KEY=sk-...
 ```
 
 ### 実行
+
+#### uv を使っている場合
+
+1. **仮想環境を有効化:**
+
+**Windows - CMD:**
+```bash
+.venv\Scripts\activate.bat
+```
+
+**Windows - PowerShell:**
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+2. **アプリを起動:**
+```bash
+python app.py
+```
+
+ブラウザで `http://localhost:5000` にアクセス
+
+#### python -m venv を使っている場合
 
 1. **仮想環境を有効化:**
 

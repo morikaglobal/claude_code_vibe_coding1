@@ -1,3 +1,6 @@
+# Github repo - claude_code_vibe_coding1
+# Desktop - claude_code_recipecardmaker (claude_code folder)
+
 Flask==3.0.0
 yt-dlp==2024.10.22
 Pillow==10.4.0
